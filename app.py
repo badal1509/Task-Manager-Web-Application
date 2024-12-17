@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from bson import ObjectId
 
 app = Flask(__name__)
-app.secret_key = "simple_secret_key"
+app.secret_key = "you_cannot_guess_the_key_hehe"
 client = MongoClient("mongodb://localhost:27017/")
 db = client["task_manager"]
 users = db["users"]
