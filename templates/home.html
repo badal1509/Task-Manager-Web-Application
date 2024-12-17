@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Welcome, <span id="username">{{ username }}</span></h2>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="task-manager">
+            <h3>Task Manager Web Application</h3>
+            <div class="task-inputs">
+                <input type="text" id="taskNameInput" placeholder="Enter task name" class="task-input">
+                <textarea id="taskDescriptionInput" placeholder="Enter task description" class="task-textarea"></textarea>
+                <button onclick="addTask()" class="add-task-btn">Add Task</button>
+            </div>
+            <ul id="taskList" class="task-list"></ul>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

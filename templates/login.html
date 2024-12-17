@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="/static/logres-style.css">
+    <script>
+
+        window.onload = function() {
+            {% if error %}
+                alert("{{ error }}");
+                window.location.href = "/register";
+            {% endif %}
+        };
+    </script>
+</head>
+<body>
+<div class="div-login-class">
+
+    <h1>Login</h1>
+    <form class="form-class" method="POST" action="/login">
+        <input type="text" name="username" required placeholder="Username"><br>
+        <input type="password" name="password" required placeholder="Password"><br>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/register">Register</a></p>
+
+</div>
+</body>
+</html>
